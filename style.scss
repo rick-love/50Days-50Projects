@@ -11,13 +11,3 @@
 @import './Sass/layout/imagePanel';
 
 @import './Sass/pages/home';
-
-@media(max-width: 480px) {
-    .container {
-        width: 100vw;
-    }
-    .img__panel:nth-of-type(4),
-    .img__panel:nth-of-type(5){
-        display: none;
-    }
-}
