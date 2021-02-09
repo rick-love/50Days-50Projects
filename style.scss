@@ -1,0 +1,23 @@
+@import './Sass/abstracts/variables';
+
+@import './Sass/base/base';
+@import './Sass/base/typography';
+@import './Sass/base/utilities';
+
+@import './Sass/components/button';
+
+@import './Sass/layout/flex';
+@import './Sass/layout/grid';
+@import './Sass/layout/imagePanel';
+
+@import './Sass/pages/home';
+
+@media(max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+    .img__panel:nth-of-type(4),
+    .img__panel:nth-of-type(5){
+        display: none;
+    }
+}
