@@ -6,11 +6,9 @@ Project One - Expanding Image Cards
     Javascript - Add / Remove Class List using forEach
     Flex Box Grow when Active
     
+Project Two - Progress Steps
+    Small project to show steps of progress for forms or progress tracking.
 
-
-
-
-Project -
 Project -
 Project -
 Project -
