@@ -9,7 +9,12 @@ Project One - Expanding Image Cards
 Project Two - Progress Steps
     Small project to show steps of progress for forms or progress tracking.
 
-Project -
+Project Three - Rotating Navigation
+    
+
+
+
+
 Project -
 Project -
 Project -
