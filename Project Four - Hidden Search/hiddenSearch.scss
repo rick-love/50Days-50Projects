@@ -1,0 +1,60 @@
+// RESET Globally
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // Translates to 10px / 1rem
+  font-size: 62.5%;
+}
+body {
+  background-image: linear-gradient(90deg, #3414c0, #6b57c5);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.search {
+  position: relative;
+  height: 5rem;
+  & .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 2rem;
+    padding: 1.5rem;
+    height: 5rem;
+    width: 5rem;
+    transition: width 0.3s ease;
+  }
+}
+.search.active {
+  & .input {
+    width: 20rem;
+  }
+  & .btn {
+    transform: translateX(20rem);
+  }
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5rem;
+  width: 5rem;
+  transition: transform 0.3s ease;
+}
+.btn:focus,
+.input:focus {
+  outline: none;
+}
