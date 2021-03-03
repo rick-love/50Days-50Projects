@@ -14,31 +14,40 @@ html {
   font-size: 62.5%;
 }
 body {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  overflow: hidden;
   box-sizing: border-box;
   font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
   font-weight: 400;
   line-height: 1.7;
   padding: 1rem;
 }
-.bg{
-    background: url('/css/docusign-ujkG7mTs7IM-unsplash.jpg') no-repeat center center/cover;
-    position: absolute;
 
-    // Adjusts white space when Blurred
-    top: -30px;
-    left: -30px;
-    width: calc(100vw + 6rem);
-    height: calc(100vh + 6rem);
-    z-index: -1;
-    filter: blur(0px);
+h1 {
+  margin: 1rem;
 }
-.loading__text{
-    font-size: 5rem;
-    color: #fff;
+.box {
+  background-color: rgba(46, 115, 241, 0.788);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 40rem;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+  &:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  &.show {
+    transform: translateX(0);
+  }
+
 }
