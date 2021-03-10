@@ -1,0 +1,128 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+$left-bg-color: rgba(13, 34, 155, 0.7);
+$right-bg-color: rgba(43, 43, 43, 0.8);
+
+$left-btn-hover-color: rgba(13, 34, 155, 1);
+$right-btn-hover-color: rgba(43, 43, 43, 1);
+
+$hover-width: 75%;
+$other-width: 25%;
+
+// RESET Globally
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // Translates to 10px / 1rem
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 1rem;
+}
+h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  white-space: nowrap;
+}
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 2px;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  width: 20rem;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  &.left {
+    left: 0;
+    background: url('../board.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $left-bg-color;
+    }
+    & .btn:hover {
+      background-color: $left-btn-hover-color;
+    }
+  }
+  &.right {
+    right: 0;
+    background: url('../bookshelves.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $right-bg-color;
+    }
+    & .btn:hover {
+      background-color: $right-btn-hover-color;
+    }
+  }
+}
+.split.left,
+.split.right,
+.split.left::before,
+.split.right::before {
+  transition: all 0.4s ease-in-out;
+}
+
+// Set Hover Width
+.hover-left {
+  & .left {
+    width: $hover-width;
+  }
+  & .right {
+    width: $other-width;
+  }
+}
+.hover-right {
+  & .right {
+    width: $hover-width;
+  }
+  & .left {
+    width: $other-width;
+  }
+}

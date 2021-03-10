@@ -27,15 +27,18 @@ body {
   padding: 1rem;
 }
 .bg{
-    background-image: url('/css/docusign-ujkG7mTs7IM-unsplash.jpg');
+    background: url('/css/docusign-ujkG7mTs7IM-unsplash.jpg') no-repeat center center/cover;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+
+    // Adjusts white space when Blurred
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 6rem);
+    height: calc(100vh + 6rem);
     z-index: -1;
+    filter: blur(0px);
 }
-.loading-text{
+.loading__text{
     font-size: 5rem;
     color: #fff;
 }

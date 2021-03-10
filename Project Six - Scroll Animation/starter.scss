@@ -1,0 +1,53 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+// RESET Globally
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // Translates to 10px / 1rem
+  font-size: 62.5%;
+}
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 1rem;
+}
+.box {
+  background-color: rgba(46, 115, 241, 0.788);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 40rem;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(200%);
+  transition: transform 0.4s ease;
+  &:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  &.show {
+    transform: translateX(0);
+  }
+
+}
